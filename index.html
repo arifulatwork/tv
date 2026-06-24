@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Wife Nushin ❤️</title>
+    <title>Family Sports Player ❤️</title>
 
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
@@ -15,54 +15,78 @@
         }
 
         body {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            height: 100vh;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #4f46e5);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
+            padding: 20px;
         }
 
         .player-container {
-            width: 90%;
-            max-width: 900px;
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            text-align: center;
+            width: 100%;
+            max-width: 950px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
 
-        h1 {
+        .header {
+            padding: 25px;
+            text-align: center;
+            background: linear-gradient(90deg, #ec4899, #6366f1);
             color: white;
-            margin-bottom: 15px;
-            font-size: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         video {
             width: 100%;
-            border-radius: 15px;
             background: black;
         }
 
         .message {
+            padding: 20px;
+            text-align: center;
             color: white;
-            margin-top: 15px;
             font-size: 18px;
+            background: #18181b;
+            line-height: 1.6;
+        }
+
+        .heart {
+            color: #ff4d6d;
         }
     </style>
 </head>
 <body>
 
 <div class="player-container">
-    <h1>❤️ For My Wife Nushin ❤️</h1>
+
+    <div class="header">
+        <h1>❤️ Family Sports Player ❤️</h1>
+        <p>For my beloved wife and my cute brother Shariful</p>
+    </div>
 
     <video id="video" controls autoplay></video>
 
     <div class="message">
-        With love, always ❤️
+        <span class="heart">❤️</span>
+        Dedicated to my wonderful wife and my cute brother Shariful.
+        May you always stay happy, healthy, and enjoy every moment together.
+        <span class="heart">❤️</span>
     </div>
+
 </div>
 
 <script>
@@ -77,8 +101,7 @@
         hls.on(Hls.Events.MANIFEST_PARSED, function () {
             video.play();
         });
-    }
-    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
         video.src = videoSrc;
         video.addEventListener('loadedmetadata', function () {
             video.play();
